@@ -5,14 +5,33 @@
   </head>
   <body>
     <button id = 'clickMe'>Get a band name!</button>
+
+
+
     <p>
       Your name is:
       <span id = "adjective"></span>
       <span id = "verb"></span>
       <span id = "noun"></span>
+    </p>
 
-      </p>
+
+    <h3>Submit words!</h3>
+    <form id="submitWords">
+      <label for="user-adjective">Give us an adjective:</label>
+      <input type="text" name="adjective" id="user-adjective">
+      <input type="submit" value="Submit Words">
+    </form>
+
+    <p id='adjectiveRes'></p>
+
+
+
+
+
+
+
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="quiz5.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
   </body>
 </html>
