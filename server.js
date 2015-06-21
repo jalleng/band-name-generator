@@ -23,28 +23,33 @@ var verb = new Verb();
 app.get('/', function(req, res) {
   res.sendFile('index.html');
 });
+
 app.get('/adjective', function(req, res) {
   res.json(getRandomWord(adjective));
 });
+
 app.get('/noun', function(req, res) {
   res.json(getRandomWord(noun));
 });
+
 app.get('/verb', function(req, res) {
   res.json(getRandomWord(verb));
 });
+
 app.post('/adjective', function(req, res) {
   var word = postRandomWord(req.body.word, adjective);
   res.json(word);
 });
+
 app.post('/noun', function(req, res) {
   var word = postRandomWord(req.body.word, noun);
   res.json(word);
 });
+
 app.post('/verb', function(req, res) {
   var word = postRandomWord(req.body.word, verb);
   res.json(word);
-})
-
+});
 
 app.listen(port, function() {
   console.log('server available at http://localhost:' + port
