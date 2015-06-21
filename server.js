@@ -7,6 +7,7 @@ var Noun = require('./lib/noun.js');
 var Verb = require('./lib/verb.js');
 
 var getRandomWord = require('./lib/getRandomWord.js');
+var postRandomWord = require('./lib/postRandomWord.js');
 
 var app = express();
 var port = process.env.PORT || 3000;
@@ -25,25 +26,20 @@ app.get('/', function(req, res) {
 app.get('/adjective', function(req, res) {
   res.json(getRandomWord(adjective));
 });
-
 app.get('/noun', function(req, res) {
   res.json(getRandomWord(noun));
 });
-
 app.get('/verb', function(req, res) {
   res.json(getRandomWord(verb));
 });
-
 app.post('/adjective', function(req, res) {
   var word = postRandomWord(req.body.word, adjective);
   res.json(word);
 });
-
 app.post('/noun', function(req, res) {
   var word = postRandomWord(req.body.word, noun);
   res.json(word);
 });
-
 app.post('/verb', function(req, res) {
   var word = postRandomWord(req.body.word, verb);
   res.json(word);
