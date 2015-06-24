@@ -11,7 +11,7 @@ $(function() {
       $('#verb').text(verb);
     });
 
-    $.get('http://localhost:3000/noun', function(response) {
+    $.get('./lib/noun.js', function(response) {
       var noun = response.word;
       $('#noun').text(noun);
     });
