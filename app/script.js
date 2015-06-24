@@ -1,12 +1,12 @@
 'use strict';
 $(function() {
   $('#clickMe').on('click', function() {
-    $.get('http://localhost:3000/adjective', function(response) {
+    $.get('/adjective', function(response) {
       var adjective = response.word;
       $('#adjective').text(adjective);
     });
 
-    $.get('http://localhost:3000/verb', function(response) {
+    $.get('/verb', function(response) {
       var verb = response.word;
       $('#verb').text(verb);
     });
