@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Band Name Generator</title>
+  </head>
+  <body>
+    <button id = 'clickMe'>Get a band name!</button>
+    <p>
+      Your name is:
+      <span id = "adjective"></span>
+      <span id = "verb"></span>
+      <span id = "noun"></span>
+    </p>
+    <h3>Submit new words!</h3>
+    <form id="submitAdjective">
+      <label for="user-adjective">Give us an adjective:</label>
+      <input type="text" name="adjective" id="user-adjective">
+      <input type="submit" value="Submit Words">
+    </form>
+    <form id="submitVerb">
+      <label for="user-verb">How about a verb!</label>
+      <input type="text" name="verb"      id="user-verb">
+      <input type="submit" value="Submit Words">
+    </form>
+    <form id="submitNoun">
+      <label for="user-noun">Can I get a noun?</label>
+      <input type="text" name="noun"      id="user-noun">
+      <input type="submit" value="Submit Words">
+    </form>
+    <p id='adjectiveRes'></p>
+    <p id='verbRes'></p>
+    <p id='nounRes'></p>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>
